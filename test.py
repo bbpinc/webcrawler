@@ -17,7 +17,9 @@ html = response.text
 
 soup = BeautifulSoup(html, 'html.parser')
 #for tag in soup.select('div[class=review-views]'):
-a = soup.findAll("div",class_="a-section celwidget")
+#a = soup.findAll("div",class_="a-section celwidget") ## 전체버전
+a = soup.find("div",class_="a-section celwidget") ## 한개의 리뷰
+#a = soup.find("span",class_="a-size-base review-text") ## text
 print(a)
 #for tag in soup.select('div[class=celwidget]'):
       #a = tag.text.strip()
